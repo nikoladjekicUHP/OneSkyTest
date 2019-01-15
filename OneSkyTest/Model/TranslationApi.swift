@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct TranslationApi {
+struct TranslationModel {
     let key: String
     let value: String
-    
+    let locale: String
 }
