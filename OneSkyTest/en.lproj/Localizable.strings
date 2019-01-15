@@ -6,5 +6,5 @@
   Copyright © 2019 UHP Mac 1. All rights reserved.
 */
 
-"title.text" = "Title";
-"subtitle.text" = "Subtitle";
+"title.text" = "Fallback Title";
+"subtitle.text" = "Fallback Subtitle";

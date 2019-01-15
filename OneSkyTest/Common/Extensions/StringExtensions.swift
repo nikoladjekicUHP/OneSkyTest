@@ -10,6 +10,9 @@ import Foundation
 
 extension String {
     var localized: String {
+        if let translation = LocalizationHelper.instance.getTranslation(key: self) {
+            return translation
+        }
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
     }
 }
