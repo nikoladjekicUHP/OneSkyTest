@@ -16,6 +16,13 @@
 		0C0502D621ECBB4300776231 /* TranslationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0502D521ECBB4300776231 /* TranslationApi.swift */; };
 		0C0502DB21ECD9EA00776231 /* HashHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0502DA21ECD9EA00776231 /* HashHelper.swift */; };
 		0C0502E021ECDF5000776231 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0502DF21ECDF5000776231 /* StringExtensions.swift */; };
+		8DF2485E21EDDB1A0021DE73 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2485D21EDDB1A0021DE73 /* CoreDataStack.swift */; };
+		8DF2486121EDDB490021DE73 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2486021EDDB490021DE73 /* Constants.swift */; };
+		8DF2486321EDDCA80021DE73 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2486221EDDCA80021DE73 /* CoreDataHelper.swift */; };
+		8DF2486521EDE1B90021DE73 /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2486421EDE1B90021DE73 /* LocalizationHelper.swift */; };
+		8DF2486C21EDE7F90021DE73 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2486B21EDE7F90021DE73 /* Persistable.swift */; };
+		8DF2486F21EDE8230021DE73 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2486E21EDE8230021DE73 /* Translation.swift */; };
+		8DF2487121EDE9D70021DE73 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2487021EDE9D70021DE73 /* DictionaryExtensions.swift */; };
 		CD468C6FA85E3CF56B9DB8B1 /* Pods_OneSkyTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AA77368EA001D011D5C507 /* Pods_OneSkyTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +41,13 @@
 		0C0502DF21ECDF5000776231 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		2614D2F67052A7254655DC66 /* Pods-OneSkyTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSkyTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSkyTest/Pods-OneSkyTest.debug.xcconfig"; sourceTree = "<group>"; };
 		4C29E2576F9138C4BE81DAC7 /* Pods-OneSkyTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSkyTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSkyTest/Pods-OneSkyTest.release.xcconfig"; sourceTree = "<group>"; };
+		8DF2485D21EDDB1A0021DE73 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		8DF2486021EDDB490021DE73 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8DF2486221EDDCA80021DE73 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		8DF2486421EDE1B90021DE73 /* LocalizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationHelper.swift; sourceTree = "<group>"; };
+		8DF2486B21EDE7F90021DE73 /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
+		8DF2486E21EDE8230021DE73 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		8DF2487021EDE9D70021DE73 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +83,8 @@
 		0C0502B421ECB8E100776231 /* OneSkyTest */ = {
 			isa = PBXGroup;
 			children = (
+				8DF2485F21EDDB400021DE73 /* Config */,
+				8DF2485C21EDDAB30021DE73 /* Persistence */,
 				0C0502DD21ECDF3100776231 /* Common */,
 				0C0502B521ECB8E100776231 /* AppDelegate.swift */,
 				0C0502D821ECD8D100776231 /* View */,
@@ -110,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				0C0502DA21ECD9EA00776231 /* HashHelper.swift */,
+				8DF2486421EDE1B90021DE73 /* LocalizationHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -127,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				0C0502DF21ECDF5000776231 /* StringExtensions.swift */,
+				8DF2487021EDE9D70021DE73 /* DictionaryExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -146,6 +164,33 @@
 				4C29E2576F9138C4BE81DAC7 /* Pods-OneSkyTest.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8DF2485C21EDDAB30021DE73 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				8DF2486D21EDE81A0021DE73 /* Entities */,
+				8DF2485D21EDDB1A0021DE73 /* CoreDataStack.swift */,
+				8DF2486221EDDCA80021DE73 /* CoreDataHelper.swift */,
+				8DF2486B21EDE7F90021DE73 /* Persistable.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		8DF2485F21EDDB400021DE73 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				8DF2486021EDDB490021DE73 /* Constants.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		8DF2486D21EDE81A0021DE73 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8DF2486E21EDE8230021DE73 /* Translation.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,14 +271,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OneSkyTest/Pods-OneSkyTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -269,12 +314,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DF2486521EDE1B90021DE73 /* LocalizationHelper.swift in Sources */,
+				8DF2485E21EDDB1A0021DE73 /* CoreDataStack.swift in Sources */,
+				8DF2487121EDE9D70021DE73 /* DictionaryExtensions.swift in Sources */,
 				0C0502E021ECDF5000776231 /* StringExtensions.swift in Sources */,
 				0C0502D621ECBB4300776231 /* TranslationApi.swift in Sources */,
 				0C0502B621ECB8E100776231 /* AppDelegate.swift in Sources */,
 				0C0502BE21ECB8E100776231 /* OneSkyTest.xcdatamodeld in Sources */,
 				0C0502DB21ECD9EA00776231 /* HashHelper.swift in Sources */,
+				8DF2486321EDDCA80021DE73 /* CoreDataHelper.swift in Sources */,
+				8DF2486C21EDE7F90021DE73 /* Persistable.swift in Sources */,
 				0C0502CC21ECB8FE00776231 /* MainViewController.swift in Sources */,
+				8DF2486121EDDB490021DE73 /* Constants.swift in Sources */,
+				8DF2486F21EDE8230021DE73 /* Translation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
